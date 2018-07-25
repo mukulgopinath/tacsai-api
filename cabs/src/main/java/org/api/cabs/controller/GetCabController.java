@@ -19,10 +19,11 @@ public class GetCabController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String cab_id = request.getParameter("cab_id");
-		if(cab_id != null) {
+		Float source_Lat = Float.parseFloat(request.getParameter("source_Lat"));
+		Float source_Long = Float.parseFloat(request.getParameter("source_Long"));
+		if(source_Lat != null && source_Long != null) {
 			CabDAO dao = new CabDAO();
-			Cabs cab = dao.getCab(Integer.parseInt(cab_id));
+			Cabs cab = dao.getClosestCab(source_Lat, source_Long);
 			
 			request.setAttribute("cab", cab);
 			RequestDispatcher rd = request.getRequestDispatcher("booking_confirmed.jsp");

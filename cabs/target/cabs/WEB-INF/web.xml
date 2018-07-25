@@ -17,22 +17,32 @@
   </servlet-mapping>
   <servlet>
     <description></description>
+    <display-name>GetFareController</display-name>
+    <servlet-name>GetFareController</servlet-name>
+    <servlet-class>org.api.cabs.controller.GetFareController</servlet-class>
+  </servlet>
+   <servlet>
+    <description></description>
     <display-name>GetCabController</display-name>
     <servlet-name>GetCabController</servlet-name>
     <servlet-class>org.api.cabs.controller.GetCabController</servlet-class>
   </servlet>
   <servlet>
     <description></description>
-    <display-name>GetFareController</display-name>
-    <servlet-name>GetFareController</servlet-name>
-    <servlet-class>org.api.cabs.controller.GetFareController</servlet-class>
+    <display-name>GetFareApi</display-name>
+    <servlet-name>GetFareApi</servlet-name>
+    <servlet-class>org.api.cabs.action.GetFareApi</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>GetCabController</servlet-name>
-    <url-pattern>/getCab</url-pattern>
+    <servlet-name>GetFareController</servlet-name>
+    <url-pattern>/getFareDetails</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>GetFareController</servlet-name>
-    <url-pattern>/getFare</url-pattern>
+    <servlet-name>GetCabController</servlet-name>
+    <url-pattern>/getCabDetails</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetFareApi</servlet-name>
+    <url-pattern>/webapi/getFare</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -1,0 +1,11 @@
+.navbar_ .nav-collapse_ , .navbar_ collapse {
+    overflow: visible;
+  }
+  body {
+  	min-width: 980px;
+  }
+ #panel .nav-collapse.collapse {
+ 	overflow: visible;
+  }
+
+/*******/
