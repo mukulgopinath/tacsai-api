@@ -86,11 +86,10 @@ public class Cabs {
 		this.isactive = isactive;
 	}
 	
-	@Override
-	public String toString() {
-		return "Cabs [cab_id=" + cab_id + ", color=" + color + ", model=" + model + ", regno=" + regno
-				+ ", loc_lat=" + loc_lat + ", loc_long=" + loc_long + ", isactive=" + isactive
-				+ "]";
-	}
+//	public String toString() {
+//		return "Cabs [cab_id=" + cab_id + ", color=" + color + ", model=" + model + ", regno=" + regno
+//				+ ", loc_lat=" + loc_lat + ", loc_long=" + loc_long + ", isactive=" + isactive
+//				+ "]";
+//	}
 	
 }

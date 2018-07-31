@@ -80,10 +80,10 @@ public class GetFareController extends HttpServlet {
 			     int timeVal = (Integer)legsObj.getJSONObject("duration").getInt("value")/60;
 			     double distVal = legsObj.getJSONObject("distance").getDouble("value")/100;
 			     
-			     double finalCost = 0.0F;
-			     double baseFare = 4.0F;
-			     double baseDist = 2.5F;
-			     double baseTime = 10.0F;
+			     double finalCost = 0.00F;
+			     double baseFare = 4.00F;
+			     double baseDist = 2.50F;
+			     double baseTime = 10.00F;
 			     double costperkm = 0.25F;
 			     double costpermin = 0.15F;
 				

@@ -1,6 +1,6 @@
 package org.api.cabs.action;
 
-import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
@@ -12,7 +12,7 @@ import org.json.JSONObject;
 
 @Path("/getFare")
 public class GetFareApi {
-	@GET
+	@POST
     @Produces(MediaType.TEXT_HTML)	 
 	public static String getCabs(@QueryParam("origin") String origin,@QueryParam("destination") String destination) {
 		String jsonRes = new String();

@@ -20,8 +20,8 @@ public class CabDAO {
             System.out.println("Query data example:");
             System.out.println("=========================================");
 
-            String selectSql = "SELECT cab_id, color, model, is_active, regno, loc_lat, loc_long, (((loc_lat - "+ source_Lat +") * (loc_lat - "+ source_Lat +")) + ((loc_long + "+ source_Long +") * (loc_long + "+ source_Long +"))) AS delta FROM cab "
-            		+" ORDER BY delta ASC INNER JOIN driver ON cab.cab_id = driver.cab_id;";
+            String selectSql = "SELECT TOP(1) cab.cab_id, driver_id,name,rating,driver_phone, color, model, is_active, regno, loc_lat, loc_long, (((loc_lat - "+ source_Lat +") * (loc_lat - "+ source_Lat +")) + ((loc_long - "+ source_Long +") * (loc_long - "+ source_Long +"))) AS delta FROM cab "
+            		+"  LEFT JOIN driver ON cab.cab_id = driver.cab_id ORDER BY delta ASC;";
         	Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(selectSql);
     		while (rs.next()){	
